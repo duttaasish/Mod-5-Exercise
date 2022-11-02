@@ -1,12 +1,9 @@
 "use strict";
 
 module.exports = (app) => {
-  var calculator = require("../controllers/CalculatorController");
-
-  //Root router
-  app.get("/", (req, res) => {
-    res.send("Main Page");
-  });
+  let calculator = require("../controllers/CalculatorController");
+  //to add in your mini project back end, it just needs a separate controller
+  let countryController = require("../controllers/CountryController");
 
   //Calculator Operation
   app.route("/operation/addByTwoParams").get(calculator.addOperationByTwoParams);
@@ -19,6 +16,8 @@ module.exports = (app) => {
   app.route("/operation/multibyList").get(calculator.multiByList);
 
   app.route("/operation/divide").get(calculator.divideOperation);
+
+  app.route("/countries/details").get(countryController.getCountry); //new route for mini-project back end
 
   // Handling 404 request from the client
   app.use((req, res, next) => {

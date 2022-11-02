@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>JavaScript Practice</title>
+        <link rel="stylesheet" href="age.css">
+        
+        <script type="text/javascript" src="project1.js"></script>
+    </head>
+        <body onload="displayNameDate(), dispMonth()" >
+        <ul>
+            <li><a href="country.html">Country API</a></li>
+            <li><a href="age.html">Age Calulator</a></li>
+            <li><a href="login.html">Logout</a></li>
+            <li id="name">Hello</li> 
+        </ul> 
+        <br>
+        <div id="ageDiv">
+            <table id="ageTable">
+                <caption><h1>Enter Date of Birth</h1></caption>
+                <tr>            
+                    <td>Date</td>
+                    <td><select onchange="updateMonth()" name="date" id="date"></select></td>
+
+                    <td>Month</td>
+                    <td><select name="month" id="month"></select></td>
+
+                    <td>Year</td>
+                    <td><select name="year" id="year"></select> </td>
+                </tr>  
+                <tr>
+                    <td colspan="6" align="center"><button onclick="calcAge()">Calculate Age</button></td>
+                </tr>
+            </table>
+        
+        <h2 id="dispAge"></h2>
+        </div>
+        <script src="age.js"></script>
+        
+    </body>
+</html>

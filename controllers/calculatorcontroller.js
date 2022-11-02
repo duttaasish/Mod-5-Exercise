@@ -1,10 +1,14 @@
 "use strict";
+const Calculator = require('../models/Calculator')
+const myCalc = new Calculator()
 
 exports.addOperationByTwoParams = (req, res) => {
   try {
     const number1 = parseInt(req.query.number1);
     const number2 = parseInt(req.query.number2);
-    const sum = number1 + number2;
+    //const sum = number1 + number2;
+    const sum = myCalc.add(number1, number2)
+
     res.status(200);
     res.json({ success: true, data: sum });
   } catch (e) {
@@ -31,7 +35,9 @@ exports.subtractOperation = (req, res) => {
   try {
     const number1 = parseInt(req.query.number1);
     const number2 = parseInt(req.query.number2);
-    const sub = number1 - number2;
+    //const sub = number1 - number2;
+    const sub = myCalc.subt(number1, number2)
+
     res.status(200);
     res.json({ success: true, data: sub });
   } catch (e) {
@@ -58,7 +64,9 @@ exports.multiplyOperation = (req, res) => {
   try{
     const number1 = parseInt(req.query.number1);
     const number2 = parseInt(req.query.number2);
-    const mul = number1 * number2;
+    //const mul = number1 * number2;
+    const mul = myCalc.mult(number1, number2)
+
     res.status(200);
     res.json({success:true, data :mul});
   }
@@ -88,7 +96,9 @@ exports.divideOperation = (req, res) => {
   try{
     const number1 = parseInt(req.query.number1);
     const number2 = parseInt(req.query.number2);
-    const div = number1 / number2;
+    //const div = number1 / number2;
+    const div = myCalc.division(number1, number2)
+
     res.status(200);
     res.json({success:true, data :div});
   }

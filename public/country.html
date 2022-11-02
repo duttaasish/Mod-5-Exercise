@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="project1.js"></script>
+    </head>
+    <body onload="displayNameDate()">
+        <ul>
+            <li selected><a href="country.html">Country API</a></li>
+            <li><a href="age.html">Age Calulator</a></li>
+            <li><a href="login.html">Logout</a></li> <!-- would be a good idea to have a function here that calls localStorage.clear() -->
+            <li id="name"></li>
+            
+        </ul> 
+       
+        <div class="container">
+            <div class="input-text">
+                <input type="text" name="" id="country-input" placeholder="Enter Country Name">
+                <button id="search-btn" onclick="searchCountry()">Search</button>
+            </div>
+            <div id="country-details">
+
+            </div>
+        </div>
+    </body>
+</html>

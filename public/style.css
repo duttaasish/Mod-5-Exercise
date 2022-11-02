@@ -1,0 +1,129 @@
+/* CSS looks great and is well formatted. consider using @media queries for responsiveness across different sized devices too */
+
+body{
+    /* background-color: lightskyblue; */
+    background: url(background.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin:0;
+}
+
+#dispName{
+    background: white;
+    height: 60px;
+    width:100%
+}
+
+#name{
+    float:right;
+    font-family: sans-serif;
+    margin-left: 20px;
+    color:red;
+}
+
+.container{
+    background-color: white;
+    width: 50vw;
+    max-width: 37.5em;
+    border-radius: .5em;
+    padding: 3em 2.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 1.25em 1.8em rgba(8,21,65,0.25);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.input-text{
+    display : grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.25em
+}
+.input-text button{
+    background-color: orange;
+    font-size: 1em;
+    color: white; 
+    padding: .45em;
+    border:0;
+    border-radius: 1.5em;
+}
+.input-text button:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.input-text input{
+    font-size: 1em;
+    border: 0;
+    border-bottom:2px solid orange;
+    padding: 0 0.62em;
+    outline: none;
+    color: gray;
+}
+.container h3{
+    margin-top: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    color:gray;
+}
+.container .flag-img{
+    display :block;
+    width : 200px;
+    height: 150px;
+    min-width: 7.5em;
+    margin : 1.8em auto 1.2em auto;
+}
+#country-details{
+    margin-top: 1.25em;
+}
+.wrapper{
+    display: inline;
+}
+.container h6{
+    display: inline;
+    margin-right: 20px;
+}
+.container span{
+    color: grey;
+}
+.tableformat{
+    text-align: left;
+}
+.thformat {
+    width: 150px;
+    margin-top: 70px;
+    padding-top: 7px;
+    font-size: 13px;
+}
+.tdformat{
+    margin-top: 70px;
+    padding-top: 7px;
+    font-family:sans-serif;
+}
+
+ul{
+    background:black;
+}
+Ul li{
+    display: inline-block;
+    padding: 30px;
+    /* color:white; */
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+
+}
+ul li a{
+    color:orange;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+ul li a:hover{
+    color: red;
+}

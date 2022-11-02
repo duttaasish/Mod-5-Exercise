@@ -1,0 +1,103 @@
+
+body{
+    background: url(background.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin:0;
+}
+
+#ageTable{
+    padding: 40px;
+    margin:auto;
+    width:400px;
+    border:10px inset orange;
+    border-radius: 10px;
+}
+#ageDiv{
+    width:100%;
+    margin-top:180px;
+}
+h1{
+    font-family: sans-serif;
+    color:white;
+}
+h2{
+    text-align: center;
+    font-family: sans-serif;
+}
+select{
+    margin-right: 25px;
+}
+
+td{
+    font-family: sans-serif;
+    color: white;;
+}
+button{
+    margin-top:30px;
+    margin-right: 20px;
+    background-color: orange;
+    color: white;
+    width: 150px;
+    border: none;
+    height:30px;
+    border-radius: 10px;
+}
+button:hover{
+    background-color:red;
+    cursor: pointer;
+}
+ul{
+    background:black;
+}
+Ul li{
+    display: inline-block;
+    padding: 30px;
+    /* color:white; */
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+ul li a{
+    color:orange;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+ul li a:hover{
+    color:red;
+    
+}
+select{
+    padding: 5px;
+    font-family: sans-serif;
+}
+label{
+    font-family: sans-serif;
+}
+h2{
+    color:white;
+}
+#name{
+    float:right;
+    font-family: sans-serif;
+    margin-left: 20px;
+    color:red;
+}
+#date {
+    padding:8px;
+    border:0;
+    border-radius: 3px;
+}
+#month {
+    padding:8px;
+    border:0;
+    border-radius: 3px;
+}
+#year {
+    padding:8px;
+    border:0;
+    border-radius: 3px;
+}

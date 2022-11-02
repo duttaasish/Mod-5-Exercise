@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <script type="text/javascript" src="project1.js"></script>
+        <style>
+            body{
+                background: url(background.jpeg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            h1{
+                font-family: sans-serif;
+                color:white;
+            }
+            #login{
+                padding: 40px;
+                margin:auto;
+                width:400px;
+                border:10px inset orange;
+                border-radius: 10px;
+            }
+            #moveTable{
+                width:100%;
+                margin-top:200px;
+            }
+            tr{
+                height:45px;
+            }
+            th{
+                font-family: sans-serif;
+                text-align: left;
+                color:white;
+            }
+            td{
+                text-align: center;
+            }
+            button{
+                margin-top:20px;
+                margin-right: 20px;
+                background-color: orange;
+                color: white;
+                width: 100px;
+                border: none;
+                height:30px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: red;
+            }
+            .inputBox{
+                height: 30px;
+                width:100%;
+                border:0;
+                border-bottom:1px solid orange;
+                background: transparent;
+                color:white;
+                outline: none;
+            }
+            #errorMessage{
+                margin-top: 30px;
+                text-align: center;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="moveTable"> 
+            <table id="login">
+            <caption><h1>User Login</h1></caption>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" name="firstName" class="inputBox" id="firstName" placeholder="First Name" maxlength="50" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <th>E-Mail Id</th>
+                <td><input type="text" name="email" class="inputBox" id="email" placeholder="E-mail Id" maxlength="70" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="pass" class="inputBox" id="pass" placeholder="Password" maxlength="50"></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <button onclick="onSubmit()">Login</button>
+                <button onclick="clearData()">Clear</button>
+            </td>
+            </tr>
+
+        </table> 
+        
+    </div>
+    <h4 id="errorMessage"></h4>
+
+    <script>
+        function onSubmit() { //you could also use a <form> and have this function run onSubmit instead of just onClick
+	        //Todo getNameValue
+	        let name = document.getElementById("firstName").value;
+            let pass = document.getElementById("pass").value;
+            let email = document.getElementById("email").value;
+            let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if((name.length > 0) && email.match(mailformat) && (pass.length > 0)) {
+                loginData();
+	        }else{
+                document.getElementById("errorMessage").innerHTML="Name or email or Password not correct";
+                return false;
+            }
+        }
+    </script>
+        
+</html>
